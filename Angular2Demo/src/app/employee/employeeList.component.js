@@ -32,7 +32,7 @@ var EmployeeListComponent = /** @class */ (function () {
     EmployeeListComponent.prototype.getTotalFemaleEmployeesCount = function () {
         return this.employees.filter(function (e) { return e.gender === "Female"; }).length;
     };
-    EmployeeListComponent.prototype.onEmployeeCountRadioButtonchange = function (selectedRadioButtonValue) {
+    EmployeeListComponent.prototype.onEmployeeCountRadioButtonChange = function (selectedRadioButtonValue) {
         this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
     };
     EmployeeListComponent = __decorate([

@@ -37,7 +37,7 @@ export class EmployeeListComponent {
 
     selectedEmployeeCountRadioButton: string = 'All';
 
-    onEmployeeCountRadioButtonchange(selectedRadioButtonValue: string): void {
+    onEmployeeCountRadioButtonChange(selectedRadioButtonValue: string): void {
         this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
     }
     //getEmployees(): void {
