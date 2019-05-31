@@ -20,7 +20,10 @@ var EmployeeListComponent = /** @class */ (function () {
         //this.employees = _employeeService.getEmployees(); //Todos los consumos de servicios es preferible que se hagan en ngOnInit();
     }
     EmployeeListComponent.prototype.ngOnInit = function () {
-        this.employees = this._employeeService.getEmployees();
+        var _this = this;
+        //this.employees = this._employeeService.getEmployees(); 
+        this._employeeService.getEmployees()
+            .subscribe(function (employeeData) { return _this.employees = employeeData; });
     };
     EmployeeListComponent.prototype.getTotalEmployeesCount = function () {
         return this.employees.length;

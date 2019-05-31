@@ -20,8 +20,10 @@ export class EmployeeListComponent implements OnInit {
 
     }
 
-    ngOnInit() {
-        this.employees = this._employeeService.getEmployees();
+    ngOnInit() { //This is the best place for service calls.
+        //this.employees = this._employeeService.getEmployees(); 
+        this._employeeService.getEmployees()
+            .subscribe((employeeData) => this.employees = employeeData);
     }
 
     getTotalEmployeesCount(): number {
